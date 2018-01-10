@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+    <definition name="base.definition" template="/WEB-INF/jsp/phibaseTiles/phibaseBaseTemplate.jsp">
+        <put-attribute name="title" value="Phibase"/>
+        <put-attribute name="header" value="/WEB-INF/jsp/phibaseTiles/phibaseBaseHeader.jsp"/>       
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/jsp/phibaseTiles/phibaseFooter.jsp"/>
+    </definition>
+ <definition name="search.definition" template="/WEB-INF/jsp/phibaseTiles/phibaseMainTemplate.jsp">
+        <put-attribute name="title" value="Phibase"/>
+        <put-attribute name="header" value="/WEB-INF/jsp/phibaseTiles/phibaseHeader.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/jsp/phibaseTiles/phibaseMenu.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/jsp/phibaseTiles/phibaseFooter.jsp"/>
+    </definition>
+
+    <definition name="base.definitionLogin" template="/WEB-INF/jsp/phibaseTiles/phibaseLoginTemplate.jsp">
+        <put-attribute name="title" value="Phibase"/>
+        <put-attribute name="header" value="/WEB-INF/jsp/phibaseTiles/phibaseLoginHeader.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/jsp/phibaseTiles/phibaseFooter.jsp"/>
+    </definition>
+    
+    <definition name="downloadXml" template="/WEB-INF/jsp/phibaseUser/downloadXml.jsp"/>
+    <definition name="downloadFasta" template="/WEB-INF/jsp/phibaseUser/downloadFasta.jsp"/>
+	
+<!-- login tiles start -->
+    <definition name="login" extends="base.definitionLogin">
+        <put-attribute name="title" value="Phibase :Login"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseLogin.jsp"/>
+    </definition>
+
+    <definition name="user" extends="search.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="menu" value="/WEB-INF/jsp/phibaseTiles/phibaseMenu.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseUser.jsp"/>
+    </definition>
+    
+     <definition name="aboutUs" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseAboutUs.jsp"/>
+    </definition>
+    
+    <definition name="releaseNote" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseReleaseNotes.jsp"/>
+    </definition>
+    
+    <definition name="search" extends="search.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseUser_bkp.jsp"/>
+    </definition>
+    <definition name="searchPage" extends="search.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseUser.jsp"/>
+    </definition>
+     <definition name="disclaimer" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseDisclaimer.jsp"/>
+    </definition>
+    <definition name="errorContribution" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseErrorContribution.jsp"/>
+    </definition>
+    <definition name="spotlight" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseSpotlight.jsp"/>
+    </definition>
+    <definition name="consortium" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseConsortium.jsp"/>
+    </definition>
+    <definition name="downloadLink" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseDownload.jsp"/>
+    </definition>
+    <definition name="generalplantLink" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseGeneralplant.jsp"/>
+    </definition>
+    <definition name="helpLink" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseHelp.jsp"/>
+    </definition>
+    
+    <definition name="termCond" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseUserTerms.jsp"/>
+    </definition>
+    
+    <definition name="successDownload" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseUserTermsNext.jsp"/>
+    </definition>
+    
+    <definition name="advancedSearch" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/phibaseAdvancedSearch.jsp"/>
+    </definition>
+    
+     <definition name="spotlightEntry" template="/WEB-INF/jsp/phibaseUser/spotlightEntry.jsp"></definition>
+    
+   <definition name="loginSpotLight" template="/WEB-INF/jsp/phibaseUser/loginSpotLight.jsp"></definition>
+    
+    
+    
+<!-- login tiles end -->
+
+
+	<!--  <definition name="pathogens" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/pathogens.jsp"/>
+    </definition> -->
+    
+   <!--   <definition name="hosts" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/hosts.jsp"/>
+    </definition> -->
+    
+     <definition name="diseases" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/diseases.jsp"/>
+    </definition>
+    
+     <definition name="ontologies" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/ontologies.jsp"/>
+    </definition>
+    
+    <!--  <definition name="taxonomies" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/taxonomies.jsp"/>
+    </definition>
+     -->
+     <!-- <definition name="literatureCitataions" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/literatureCitataions.jsp"/>
+    </definition> -->
+    
+    <!--  <definition name="externalResources" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/externalResources.jsp"/>
+    </definition>     -->
+    
+    <definition name="developerResources" extends="base.definition">
+        <put-attribute name="title" value="Phibase :Welcome"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/phibaseUser/developerResources.jsp"/>
+    </definition>
+    
+
+</tiles-definitions>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xmlns="http://java.sun.com/xml/ns/javaee" 
+			xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+			http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+	<listener>
+    	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<servlet>
+    	<servlet-name>Phibase</servlet-name>
+	    <servlet-class>com.molcon.phibase.controller.PhibaseDispatcherServlet</servlet-class>
+	    <init-param>
+    	    <param-name>contextConfigLocation</param-name>
+	        <param-value>/WEB-INF/applicationContext.xml</param-value>
+        </init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	 <filter>
+    	<filter-name>encoding-filter</filter-name>
+        <filter-class>
+            org.springframework.web.filter.CharacterEncodingFilter
+        </filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>encoding-filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+    	<filter-name>cors-filter</filter-name>
+        <filter-class>
+            com.molcon.phibase.util.CORSFilter
+        </filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>cors-filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+	<welcome-file-list>
+			<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+
+  <servlet-mapping>
+  <servlet-name>Phibase</servlet-name>
+  	<url-pattern>/</url-pattern>
+  	<!-- <url-pattern>*.htm</url-pattern> -->
+  </servlet-mapping> 
+  
+ <!--  <filter>
+	<filter-name>springSecurityFilterChain</filter-name>
+	<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+</filter>
+
+<filter-mapping>
+	<filter-name>springSecurityFilterChain</filter-name>
+	<url-pattern>/spotLight/*</url-pattern>
+</filter-mapping> -->
+
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+</web-app>
